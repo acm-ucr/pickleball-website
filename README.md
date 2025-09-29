@@ -13,7 +13,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[Pickleball Website Figma Design File](https://www.figma.com/design/5415qCdOfJPoiJKY9MaNB0/PickleBall-Website?node-id=0-1&p=f&t=E60IOAnRt4jFGuD3-0)
 
 ## Node.js
 
