@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --color-pickleball-lime-100: #f4ff56;
+  --color-pickleball-green-100: #174218;
+  --color-pickleball-green-200: #153115;
+  --color-pickleball-blue-100: #3d90ef;
+}
