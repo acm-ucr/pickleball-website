@@ -1,18 +1,20 @@
 const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
-    <div className="bg-pickleball-green-200 flex w-3/4 items-center gap-1 justify-self-center p-8">
-      <div className="bg-pickleball-lime-100 w-1/2 p-5 text-left">
+    <div className="bg-pickleball-green-200 flex w-2/3 flex-col items-center gap-8 justify-self-center rounded-lg p-10">
+      <div className="bg-pickleball-green-100 w-1/2 p-5 text-center text-lg text-white">
         {props.text1}
       </div>
-      <div className="flex w-1/2 flex-row gap-1">
-        <div className="bg-pickleball-lime-100 w-full p-5 text-left">
-          props.text2
+      <div className="flex w-1/2 gap-1">
+        <div className="bg-pickleball-lime-100 w-full rounded-full p-5 text-center">
+          {props.text2}
         </div>
-        <div className="bg-pickleball-lime-100 w-full p-5 text-right">
+        <div className="bg-pickleball-lime-100 w-full rounded-full p-5 text-center">
           {props.text2}
         </div>
       </div>
-      {/* Hint: Add another box/div here similarly to line 4 */}
+      <div className="bg-pickleball-blue-100 w-1/2 p-5 text-center">
+        {props.text3}
+      </div>
     </div>
   );
 };
