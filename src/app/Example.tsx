@@ -1,7 +1,7 @@
 const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
     <div className="bg-pickleball-green-200 flex w-2/3 flex-col items-center gap-5 justify-self-center rounded-lg p-8">
-      <div className="bg-pickleball-green-100 text-white w-1/2 p-5 text-center text-lg">
+      <div className="bg-pickleball-green-100 w-1/2 p-5 text-center text-lg text-white">
         {props.text1}
       </div>
       <div className="flex w-1/2 flex-row gap-1">
