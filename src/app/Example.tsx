@@ -4,14 +4,12 @@ interface ComponentProps {
   text1: string;
   text2: string;
   text3: string;
-  text4: string;
-
 }
 
-const ComponentProps = ({text1, text2, text3}: ComponentProps) =>{
+const ComponentProps = ({ text1, text2, text3 }: ComponentProps) => {
   return (
     <div className="bg-pickleball-green-200 flex w-2/3 flex-col items-center justify-center gap-6 rounded-2xl p-10">
-      <div className="bg-pickleball-green-100 px-30 py-4 text-center text-xl text-white rounded-md">
+      <div className="bg-pickleball-green-100 rounded-md px-30 py-4 text-center text-xl text-white">
         {text1}
       </div>
 
