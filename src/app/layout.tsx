@@ -1,8 +1,12 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Kanit } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 
-const inter = Inter({ subsets: ["latin"] });
+const kanit = Kanit({
+  subsets: ["latin"],
+  variable: "--font-kanit",
+  weight: ["400", "700"],
+});
 
 export const metadata = {
   title: "Pickleball @ UCR",
@@ -16,7 +20,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${kanit.className} bg-pickleball-green-100`}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
