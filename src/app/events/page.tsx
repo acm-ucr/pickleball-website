@@ -1,7 +1,10 @@
+import Header from "@/components/header";
+
 const Events = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex h-screen w-screen flex-col items-center justify-center">
       Events
+      <Header title="Weekly Events" />
     </div>
   );
 };
