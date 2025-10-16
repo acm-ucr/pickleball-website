@@ -6,15 +6,15 @@ interface EventsProps {
 }
 const Event = ({ day, time, location, description }: EventsProps) => {
   return (
-    <div className="bg-pickleball-green-100 items-left flex h-screen w-screen flex-col">
-      <div className="bg-pickleball-lime-100 text-pickleball-green-100 mt-50 ml-50 h-1/17 w-1/6 space-y-3 rounded-lg py-2.5 text-center text-xl font-bold">
+    <div className="items-left W-1/6 flex flex-col gap-10">
+      <div className="bg-pickleball-lime-100 text-pickleball-green-100 w-full rounded-lg py-3 text-center text-2xl font-bold">
         {day}s
       </div>
-      <div className="text-pickleball-lime-100 mx-50 my-5 text-left text-lg font-light">
+      <div className="text-pickleball-lime-100 text-left text-lg">
         Every {day} | @{time} <br />
         {location}
       </div>
-      <div className="text-pickleball-lime-100 mx-50 w-1/7 text-left text-sm font-light text-balance">
+      <div className="text-pickleball-lime-100 w-full text-left text-sm text-balance">
         {description}
       </div>
     </div>
