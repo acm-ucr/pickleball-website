@@ -5,13 +5,13 @@ import footerData from "@/data/footer";
 
 const Footer = () => {
   return (
-    <div className="bg-pickleball-lime-100 relative flex w-full">
+    <div className="bg-pickleball-lime-100 relative flex w-full items-center justify-between">
       <Image
         src={Logo}
         alt="Pickleball @ UCR"
         className="ml-[6vw] w-1/8 py-[6vh]"
       />
-      <div className="text-pickleball-green-100 absolute right-0 mr-[6vw] flex h-full items-center justify-center">
+      <div className="text-pickleball-green-100 mr-[6vw]">
         <div className="flex flex-col gap-y-[2vh]">
           <p className="text-4xl">Contact Us</p>
           <p className="text-xl">pickleballclubatucr@gmail.com</p>
