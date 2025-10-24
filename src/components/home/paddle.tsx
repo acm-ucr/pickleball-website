@@ -10,7 +10,7 @@ interface PaddleProps {
 const Paddle = ({ text, number, className }: PaddleProps) => {
   return (
     <div className={`m-4 flex items-center justify-center ${className}`}>
-      <div className={`relative ${"h-sm w-sm"}`}>
+      <div className="h-sm relative w-sm">
         <Image
           src={whitePaddle}
           alt="white paddle"
