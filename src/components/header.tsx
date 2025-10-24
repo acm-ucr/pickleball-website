@@ -1,10 +1,10 @@
-interface headerProps {
+interface HeaderProps {
   title: string;
 }
 
-const Header = ({ title }: headerProps) => {
+const Header = ({ title }: HeaderProps) => {
   return (
-    <h1 className="text-pickleball-lime-100 text-3xl font-bold">{title}</h1>
+    <div className="text-pickleball-lime-100 text-6xl font-bold">{title}</div>
   );
 };
 
