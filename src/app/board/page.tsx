@@ -1,7 +1,9 @@
+import Header from "@/components/header";
+
 const Board = () => {
   return (
-    <div className="flex h-screen w-full items-center justify-center">
-      Board
+    <div className="flex h-screen w-screen flex-col items-center justify-center">
+      <Header title="Board" />
     </div>
   );
 };

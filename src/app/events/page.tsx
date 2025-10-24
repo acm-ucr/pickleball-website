@@ -1,7 +1,9 @@
+import Header from "@/components/header";
+
 const Events = () => {
   return (
-    <div className="flex h-screen w-full items-center justify-center">
-      Events
+    <div className="flex h-screen w-screen flex-col items-center justify-center">
+      <Header title="Events" />
     </div>
   );
 };
