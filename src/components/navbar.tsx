@@ -45,7 +45,6 @@ const Navbar = () => {
       <div className="z-20 cursor-pointer text-3xl font-semibold">
         <Link href="/">PICKLEBALL@UCR</Link>
       </div>
-      {/* Normal Nav */}
       <div className="hidden space-x-16 text-xl md:flex">
         {items.map(({ name, link }) => (
           <Link key={name} href={link} passHref>
@@ -61,7 +60,6 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      {/* Hamburger -> Cross */}
       <button
         onClick={handleClick}
         className="pointer-events-auto relative z-20 flex flex-col items-center justify-center md:hidden"
