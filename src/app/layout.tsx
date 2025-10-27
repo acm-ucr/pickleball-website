@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Kanit } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const kanit = Kanit({
@@ -21,6 +22,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
+      <Navbar />
       <body className={`${kanit.className} bg-pickleball-green-100`}>
         <ReactQueryClientProvider>
           {children}
