@@ -1,9 +1,9 @@
-import Example from "./Example";
+import Landing from "@/components/home/landing";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Example text1="Some" text2="Props" text3="Here" />
+    <div className="flex h-screen w-full flex-col items-center justify-center">
+      <Landing />
     </div>
   );
 };
