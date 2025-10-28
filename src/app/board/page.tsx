@@ -8,14 +8,14 @@ const Board = () => {
       <Header title="Board" />
       <div className="mt-8 flex flex-wrap justify-center gap-8">
         <div className="flex flex-col items-center">
-        <BoardCard
-          image={bryan_image}
-          name="Bryan Nguyen"
-          position="President"
-        />
+          <BoardCard
+            image={bryan_image}
+            name="Bryan Nguyen"
+            position="President"
+          />
+        </div>
       </div>
     </div>
-  </div> 
   );
 };
 
