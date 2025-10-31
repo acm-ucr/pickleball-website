@@ -1,9 +1,11 @@
 import Landing from "@/components/home/landing";
+import Paddles from "@/components/home/paddles";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center">
+    <div className="flex w-full flex-col items-center justify-center">
       <Landing />
+      <Paddles />
     </div>
   );
 };
