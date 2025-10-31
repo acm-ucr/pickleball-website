@@ -1,10 +1,15 @@
 import Landing from "@/components/home/landing";
-import BluePaddles from "@/components/home/bluepaddles";
+import BluePaddle from "@/components/home/bluepaddles";
 const Home = () => {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center">
       <Landing />
-      <BluePaddles />
+      <div className="absolute top-3 -right-5 rotate-[-141deg]">
+        <BluePaddle />
+      </div>
+      <div className="absolute bottom-3 -left-5 rotate-[39deg]">
+        <BluePaddle />
+      </div>
     </div>
   );
 };
