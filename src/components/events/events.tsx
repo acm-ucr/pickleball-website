@@ -1,7 +1,7 @@
 import Event from "@/components/events/event";
 const WeekEvents = () => {
   return (
-    <div className="flex-col flex w-full items-center justify-center gap-15 pt-20 pb-20 md:flex-row md:gap-25">
+    <div className="flex w-full flex-col items-center justify-center gap-15 pt-20 pb-20 md:flex-row md:gap-25">
       <Event
         day="Monday"
         time="8pm"
