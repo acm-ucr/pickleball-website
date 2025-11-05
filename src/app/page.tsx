@@ -3,12 +3,10 @@ import Header from "@/components/header";
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center">
+    <div className="flex h-screen w-full flex-col items-center justify-center">
       <Landing />
 
-      <div className="mt-12">
-        <Header title="Join Us" />
-      </div>
+      <Header title="JOIN US" />
     </div>
   );
 };
