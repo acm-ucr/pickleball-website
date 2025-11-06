@@ -5,9 +5,7 @@ const Home = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       <Pickleballs />
-      <div className="flex h-screen w-full flex-col items-center justify-center">
-        <Landing />
-      </div>
+      <Landing />
     </div>
   );
 };

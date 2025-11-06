@@ -1,38 +1,29 @@
 import Image from "next/image";
 import bgBall from "@/public/bg-ball-1.svg";
 
-export default function Pickleballs() {
-  return (
-    <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
-      <Image
-        src={bgBall}
-        alt=""
-        width={1324}
-        height={1241}
-        className="absolute top-[20px] left-[-693px]"
-        style={{ transform: "rotate(5deg)" }}
-        priority
-      />
+const Pickleballs = () => (
+  <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
+    <Image
+      src={bgBall}
+      alt="Pickleball"
+      className="absolute top-[0%] left-[-35%] rotate-[5deg]"
+      priority
+    />
 
-      <Image
-        src={bgBall}
-        alt=""
-        width={1324}
-        height={1241}
-        className="absolute top-[466px] left-[1232px]"
-        style={{ transform: "rotate(5deg)" }}
-        priority
-      />
+    <Image
+      src={bgBall}
+      alt="Pickleball"
+      className="absolute top-[20%] left-[80%] rotate-[5deg]"
+      priority
+    />
 
-      <Image
-        src={bgBall}
-        alt=""
-        width={1324}
-        height={1241}
-        className="absolute top-[2091px] left-[246px]"
-        style={{ transform: "rotate(5deg)" }}
-        priority
-      />
-    </div>
-  );
-}
+    <Image
+      src={bgBall}
+      alt="Pickleball"
+      className="absolute top-[80%] left-[40%] rotate-[5deg]"
+      priority
+    />
+  </div>
+);
+
+export default Pickleballs;
