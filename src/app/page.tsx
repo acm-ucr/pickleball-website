@@ -2,7 +2,9 @@ import Landing from "@/components/home/landing";
 import BluePaddle from "@/components/home/bluepaddles";
 const Home = () => {
   return (
-    <div className="relative overflow-hidden flex h-screen w-full flex-col items-center justify-center">      <Landing />
+    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+      {" "}
+      <Landing />
       <div className="absolute top-3 -right-5 rotate-[-141deg]">
         <BluePaddle />
       </div>
