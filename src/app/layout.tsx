@@ -22,9 +22,9 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <Navbar />
       <body className={`${kanit.className} bg-pickleball-green-100`}>
         <ReactQueryClientProvider>
+          <Navbar />
           {children}
           <Footer />
         </ReactQueryClientProvider>
