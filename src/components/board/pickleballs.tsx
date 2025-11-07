@@ -8,13 +8,13 @@ export default function Pickleballs() {
       <Image
         src={Pickleball1}
         alt="pickleball 1"
-        className="absolute -top-10 -right-10 -z-1 h-32 w-32 opacity-90"
+        className="absolute -top-70 -right-50 -z-1 h-auto w-[50vw]"
       />
 
       <Image
         src={Pickleball2}
         alt="pickleball 2"
-        className="absolute -bottom-10 -left-10 -z-1 h-32 w-32 opacity-90"
+        className="absolute -bottom-70 -left-60 -z-1 h-auto w-[50vw]"
       />
     </>
   );
