@@ -20,7 +20,7 @@ const Pickleballs = () => (
     <Image
       src={bgBall}
       alt="Pickleball"
-      className="absolute top-[80%] left-[40%] rotate-[5deg]"
+      className="absolute top-[65%] left-[40%] rotate-[5deg]"
       priority
     />
   </div>
