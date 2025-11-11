@@ -18,12 +18,7 @@ const Button = ({
   return (
     <Link
       href={link}
-      className="w-1/5 rounded-md border-1 py-2 text-center"
-      style={{
-        color: textColor,
-        backgroundColor: background,
-        borderColor: borderColor,
-      }}
+      className={`${textColor} ${background} ${borderColor} w-full rounded-xl border-2 py-3 text-center text-3xl`}
     >
       {text}
     </Link>

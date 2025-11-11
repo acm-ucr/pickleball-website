@@ -1,11 +1,14 @@
 import Header from "@/components/header";
+import Pickleballs from "@/components/board/pickleballs";
 
-const Board = () => {
+const Pickleball = () => {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center">
+    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
       <Header title="Board" />
+
+      <Pickleballs />
     </div>
   );
 };
 
-export default Board;
+export default Pickleball;

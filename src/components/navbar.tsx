@@ -41,7 +41,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="bg-pickleball-lime-100 absolute top-0 left-0 z-50 flex w-full items-center justify-between p-5 px-10 text-black">
+    <div className="bg-pickleball-lime-100 flex w-full items-center justify-between p-5 px-10 text-black">
       <div className="z-20 cursor-pointer text-3xl font-semibold">
         <Link href="/">PICKLEBALL@UCR</Link>
       </div>
