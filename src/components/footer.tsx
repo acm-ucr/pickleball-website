@@ -9,7 +9,7 @@ const Footer = () => {
       <Image
         src={Logo}
         alt="Pickleball @ UCR"
-        className="ml-[6vw] w-1/4 py-[3vh] md:w-1/5 md:py-[6vh] lg:w-1/8"
+        className="w-1/4 py-[3vh] md:ml-[6vw] md:w-1/5 md:py-[6vh] lg:w-1/8"
       />
       <div className="text-pickleball-green-100 pb-[3vh] md:mr-[6vw] md:pb-0">
         <div className="flex flex-col items-center gap-y-[1vh] md:items-start md:gap-y-[2vh]">
