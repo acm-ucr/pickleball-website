@@ -3,7 +3,7 @@ import logo from "@/public/images/logo_transparent_2.webp";
 
 const Landing = () => {
   return (
-    <div className="flex w-full items-center justify-center">
+    <div className="flex h-screen w-full items-center justify-center">
       <div className="flex w-1/2 flex-col items-center justify-center gap-y-8">
         <Image src={logo} alt="Logo" className="h-1/4 w-1/4" />
         <p className="text-pickleball-lime-100 text-5xl font-bold">
