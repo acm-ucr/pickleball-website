@@ -5,7 +5,7 @@ const GalleryImages = () => {
   return (
     <div className="flex items-center justify-center py-10">
       <div className="w-full max-w-6xl px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {gallery.map(({ image, alt }, index) => (
             <div key={index} className="relative w-full overflow-hidden">
               <Image
