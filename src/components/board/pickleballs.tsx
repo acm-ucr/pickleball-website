@@ -5,17 +5,21 @@ import Pickleball2 from "@/public/bg-ball-2.svg";
 export default function Pickleballs() {
   return (
     <>
-      <Image
-        src={Pickleball1}
-        alt="pickleball 1"
-        className="absolute -top-70 -right-50 -z-1 h-auto w-[50vw]"
-      />
+      <div className="absolute top-[-10%] right-[-10%] w-[40vw] sm:w-[30vw] md:w-[25vw] lg:w-[20vw] z-[-1]">
+        <Image
+          src={Pickleball1}
+          alt="pickleball 1"
+          className="w-full h-auto"
+        />
+      </div>
 
-      <Image
-        src={Pickleball2}
-        alt="pickleball 2"
-        className="absolute -bottom-70 -left-60 -z-1 h-auto w-[50vw]"
-      />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[40vw] sm:w-[30vw] md:w-[25vw] lg:w-[20vw] z-[-1]">
+        <Image
+          src={Pickleball2}
+          alt="pickleball 2"
+          className="w-full h-auto"
+        />
+      </div>
     </>
   );
 }
