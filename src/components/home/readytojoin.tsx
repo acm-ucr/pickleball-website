@@ -2,10 +2,10 @@ import Button from "@/components/home/button";
 
 const ReadyToJoin = () => {
   return (
-    <div className="bg-pickleball-green-200 text-pickleball-lime-100 flex w-full justify-center py-[12vh]">
-      <div className="flex flex-col items-center gap-y-[5vh]">
-        <p className="text-5xl font-bold">READY TO JOIN?</p>
-        <p className="text-center text-lg">
+    <div className="bg-pickleball-green-200 text-pickleball-lime-100 flex w-full justify-center py-[12vh] px-4 sm:px-8">
+      <div className="flex flex-col items-center text-center gap-y-8 sm:gap-y-[5vh]">
+        <p className="text-4xl sm:text-5xl font-bold">READY TO JOIN?</p>
+        <p className="text-center text-base sm:text-lg max-w-xs sm:max-w-2xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.
         </p>
