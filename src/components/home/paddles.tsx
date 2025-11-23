@@ -4,13 +4,13 @@ import { paddles } from "@/data/paddle";
 import { motion } from "motion/react";
 
 const paddleAnimation = {
-  hidden: { opacity: 0, x: 200 },
+  hidden: { opacity: 0, x: 150 },
   visible: {
     opacity: 1,
     x: 0,
-    rotate: [0, -60, 0, -5, 0],
+    rotate: [0, -35, 0, -5, 0],
     transition: {
-      duration: 1.0,
+      duration: 1.2,
     },
   },
 };
@@ -25,7 +25,7 @@ const Paddles = () => {
             variants={paddleAnimation}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.4 }}
           >
             <Paddle key={index} text={text} number={number} />
           </motion.div>
@@ -38,7 +38,7 @@ const Paddles = () => {
             variants={paddleAnimation}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.6 }}
           >
             <Paddle
               key={index + 3}
