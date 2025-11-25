@@ -81,7 +81,7 @@ const Day = ({ day, events, modifiers, ...tdprops }: DayProps) => {
   );
 };
 
-function Calendar({ events }: CalendarProps) {
+function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const nextMonth = () => {
@@ -123,9 +123,6 @@ function Calendar({ events }: CalendarProps) {
           button_next: "hidden",
           button_previous: "hidden",
           caption_label: "hidden",
-        }}
-        components={{
-          Day: (props) => <Day {...props} events={events} />,
         }}
       />
     </div>
