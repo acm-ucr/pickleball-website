@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import CalendarHeader from "../calendar/calendarHeader";
-import { DayPicker, CalendarDay, Modifiers } from "react-day-picker";
+import { DayPicker } from "react-day-picker";
 
 export interface GoogleEventProps {
   start: { dateTime?: Date };
@@ -23,11 +23,11 @@ export interface CalendarEventProps {
 //   events: CalendarEventProps[];
 // };
 
-interface DayProps extends React.ComponentProps<"td"> {
-  day: CalendarDay;
-  events: CalendarEventProps[];
-  modifiers: Modifiers;
-}
+// interface DayProps extends React.ComponentProps<"td"> {
+//   day: CalendarDay;
+//   events: CalendarEventProps[];
+//   modifiers: Modifiers;
+// }
 
 // const Day = ({ day, events, modifiers, ...tdprops }: DayProps) => {
 //   const { date } = day;
