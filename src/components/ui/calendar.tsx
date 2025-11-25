@@ -19,9 +19,9 @@ export interface CalendarEventProps {
   title: string;
 }
 
-type CalendarProps = React.ComponentProps<typeof DayPicker> & {
-  events: CalendarEventProps[];
-};
+// type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+//   events: CalendarEventProps[];
+// };
 
 interface DayProps extends React.ComponentProps<"td"> {
   day: CalendarDay;
@@ -29,57 +29,57 @@ interface DayProps extends React.ComponentProps<"td"> {
   modifiers: Modifiers;
 }
 
-const Day = ({ day, events, modifiers, ...tdprops }: DayProps) => {
-  const { date } = day;
-  const { outside } = modifiers;
+// const Day = ({ day, events, modifiers, ...tdprops }: DayProps) => {
+//   const { date } = day;
+//   const { outside } = modifiers;
 
-  const filteredEvents = events?.filter(({ start, end }) => {
-    if (!start || !end) return false;
-    const startDate = new Date(start);
-    const endDate = new Date(end);
+//   const filteredEvents = events?.filter(({ start, end }) => {
+//     if (!start || !end) return false;
+//     const startDate = new Date(start);
+//     const endDate = new Date(end);
 
-    startDate.setHours(0, 0, 0, 0);
-    endDate.setHours(23, 59, 59, 999);
+//     startDate.setHours(0, 0, 0, 0);
+//     endDate.setHours(23, 59, 59, 999);
 
-    return date >= startDate && date <= endDate;
-  });
+//     return date >= startDate && date <= endDate;
+//   });
 
-  return (
-    <td
-      {...tdprops}
-      className="border-pickleball-blue-100 flex flex-col items-end justify-start border bg-white pb-8"
-    >
-      <div
-        className={`hidden pt-1 pr-2 pb-4 text-4xl md:block ${outside ? "text-gray-300" : "text-black"}`}
-      >
-        {date.getDate()}
-      </div>
-      {filteredEvents?.map(({ title, start }, index) => {
-        const eventDate = new Date(start as string);
-        if (
-          eventDate.getDate() === date.getDate() &&
-          eventDate.getMonth() === date.getMonth() &&
-          eventDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <div key={index} className="w-full bg-white text-center text-4xl">
-              {title} at{" "}
-              {start
-                ? new Date(start).toLocaleTimeString([], {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })
-                : ""}
-            </div>
-          );
-        }
-      })}
-      <div className={`md:hidden ${outside ? "text-gray-300" : "text-black"}`}>
-        {date.getDate()}
-      </div>
-    </td>
-  );
-};
+//   return (
+//     <td
+//       {...tdprops}
+//       className="border-pickleball-blue-100 flex flex-col items-end justify-start border bg-white pb-8"
+//     >
+//       <div
+//         className={`hidden pt-1 pr-2 pb-4 text-4xl md:block ${outside ? "text-gray-300" : "text-black"}`}
+//       >
+//         {date.getDate()}
+//       </div>
+//       {filteredEvents?.map(({ title, start }, index) => {
+//         const eventDate = new Date(start as string);
+//         if (
+//           eventDate.getDate() === date.getDate() &&
+//           eventDate.getMonth() === date.getMonth() &&
+//           eventDate.getFullYear() === date.getFullYear()
+//         ) {
+//           return (
+//             <div key={index} className="w-full bg-white text-center text-4xl">
+//               {title} at{" "}
+//               {start
+//                 ? new Date(start).toLocaleTimeString([], {
+//                     hour: "2-digit",
+//                     minute: "2-digit",
+//                   })
+//                 : ""}
+//             </div>
+//           );
+//         }
+//       })}
+//       <div className={`md:hidden ${outside ? "text-gray-300" : "text-black"}`}>
+//         {date.getDate()}
+//       </div>
+//     </td>
+//   );
+// };
 
 function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
