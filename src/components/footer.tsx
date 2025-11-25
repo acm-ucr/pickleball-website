@@ -5,21 +5,21 @@ import footerData from "@/data/footer";
 
 const Footer = () => {
   return (
-    <div className="bg-pickleball-lime-100 relative flex w-full items-center justify-between">
+    <div className="bg-pickleball-lime-100 relative flex w-full flex-col items-center justify-between md:flex-row">
       <Image
         src={Logo}
         alt="Pickleball @ UCR"
-        className="ml-[6vw] w-1/8 py-[6vh]"
+        className="w-1/4 py-[3vh] md:ml-[6vw] md:w-1/5 md:py-[6vh] lg:w-1/8"
       />
-      <div className="text-pickleball-green-100 mr-[6vw]">
-        <div className="flex flex-col gap-y-[2vh]">
-          <p className="text-4xl">Contact Us</p>
-          <p className="text-xl">pickleballclubatucr@gmail.com</p>
-          <div className="flex gap-x-[7%]">
+      <div className="text-pickleball-green-100 pb-[3vh] md:mr-[6vw] md:pb-0">
+        <div className="flex flex-col items-center gap-y-[1vh] md:items-start md:gap-y-[2vh]">
+          <p className="text-2xl md:text-4xl">Contact Us</p>
+          <p className="text-lg md:text-xl">pickleballclubatucr@gmail.com</p>
+          <div className="flex justify-center gap-x-[15%] md:justify-normal md:gap-x-[7%]">
             {footerData.map(({ Icon, link }) => (
               <div key={link}>
                 <Link href={link} target="_blank">
-                  <Icon className="h-[6vh] w-auto" />
+                  <Icon className="w-auto text-5xl" />
                 </Link>
               </div>
             ))}
