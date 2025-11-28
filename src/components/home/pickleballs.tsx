@@ -6,21 +6,21 @@ const Pickleballs = () => (
     <Image
       src={bgBall}
       alt="Pickleball"
-      className="absolute top-[0%] left-[-35%] rotate-[5deg]"
+      className="absolute top-[0%] left-[-45%] rotate-[5deg] md:top-[0%] md:left-[-35%]"
       priority
     />
 
     <Image
       src={bgBall}
       alt="Pickleball"
-      className="absolute top-[20%] left-[80%] rotate-[5deg]"
+      className="absolute top-[15%] left-[40%] rotate-[5deg] md:top-[20%] md:left-[75%]"
       priority
     />
 
     <Image
       src={bgBall}
       alt="Pickleball"
-      className="absolute top-[65%] left-[40%] rotate-[5deg]"
+      className="absolute top-[55%] left-[-35%] rotate-[5deg] md:top-[65%] md:left-[40%]"
       priority
     />
   </div>
