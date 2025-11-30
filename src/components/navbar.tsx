@@ -90,7 +90,7 @@ const Navbar = () => {
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}
-        className="bg-pickleball-lime-100 absolute top-0 left-0 flex h-[40vh] w-full flex-col items-center justify-center shadow-lg md:hidden"
+        className="bg-pickleball-lime-100 absolute top-0 left-0 z-10 flex h-[40vh] w-full flex-col items-center justify-center shadow-lg md:hidden"
         variants={sidebarVariants}
       >
         <motion.ul className="list-none space-y-6 text-2xl text-black">
