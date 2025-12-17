@@ -29,9 +29,9 @@ const CalendarHeader = ({
   ];
 
   return (
-    <div className="text-pickleball-lime-100 flex w-3/4 items-center justify-between font-bold">
-      <div className="text-6xl">Calendar</div>
-      <div className="flex items-center gap-8 text-4xl">
+    <div className="text-pickleball-lime-100 flex w-4/5 flex-col items-center justify-between font-bold md:flex-row md:pb-8">
+      <div className="text-3xl md:text-6xl">Calendar</div>
+      <div className="flex items-center gap-8 text-center text-2xl md:text-4xl">
         <div onClick={onPrevMonth}>
           <IoArrowBack />
         </div>

@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import CalendarHeader from "../calendar/calendarHeader";
-import { DayPicker } from "react-day-picker";
+import { DayPicker, Modifiers, CalendarDay } from "react-day-picker";
 
 export interface GoogleEventProps {
-  start: { dateTime?: Date };
-  end: { dateTime?: Date };
+  start: {
+    dateTime?: string;
+  };
+  end: {
+    dateTime?: string;
+  };
   location: string;
   description: string;
-  summary?: string;
+  summary: string;
 }
 
 export interface CalendarEventProps {
@@ -19,85 +23,110 @@ export interface CalendarEventProps {
   title: string;
 }
 
-// type CalendarProps = React.ComponentProps<typeof DayPicker> & {
-//   events: CalendarEventProps[];
-// };
+type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  events: CalendarEventProps[];
+};
 
-// interface DayProps extends React.ComponentProps<"td"> {
-//   day: CalendarDay;
-//   events: CalendarEventProps[];
-//   modifiers: Modifiers;
-// }
+interface DayProps extends React.ComponentProps<"td"> {
+  events: CalendarEventProps[];
+  day: CalendarDay;
+  modifiers: Modifiers;
+}
 
-// const Day = ({ day, events, modifiers, ...tdprops }: DayProps) => {
-//   const { date } = day;
-//   const { outside } = modifiers;
+const Day = ({ events, day, modifiers, ...tdprops }: DayProps) => {
+  const { date } = day;
+  const { today, outside } = modifiers;
 
-//   const filteredEvents = events?.filter(({ start, end }) => {
-//     if (!start || !end) return false;
-//     const startDate = new Date(start);
-//     const endDate = new Date(end);
+  const filteredEvents = events?.filter(({ start, end }) => {
+    if (!start || !end) {
+      return false;
+    }
+    const startDate = new Date(start);
+    const endDate = new Date(end);
 
-//     startDate.setHours(0, 0, 0, 0);
-//     endDate.setHours(23, 59, 59, 999);
+    startDate?.setHours(0, 0, 0, 0);
+    endDate?.setHours(23, 59, 59, 999);
 
-//     return date >= startDate && date <= endDate;
-//   });
+    return date >= startDate && date <= endDate;
+  });
 
-//   return (
-//     <td
-//       {...tdprops}
-//       className="border-pickleball-blue-100 flex flex-col items-end justify-start border bg-white pb-8"
-//     >
-//       <div
-//         className={`hidden pt-1 pr-2 pb-4 text-4xl md:block ${outside ? "text-gray-300" : "text-black"}`}
-//       >
-//         {date.getDate()}
-//       </div>
-//       {filteredEvents?.map(({ title, start }, index) => {
-//         const eventDate = new Date(start as string);
-//         if (
-//           eventDate.getDate() === date.getDate() &&
-//           eventDate.getMonth() === date.getMonth() &&
-//           eventDate.getFullYear() === date.getFullYear()
-//         ) {
-//           return (
-//             <div key={index} className="w-full bg-white text-center text-4xl">
-//               {title} at{" "}
-//               {start
-//                 ? new Date(start).toLocaleTimeString([], {
-//                     hour: "2-digit",
-//                     minute: "2-digit",
-//                   })
-//                 : ""}
-//             </div>
-//           );
-//         }
-//       })}
-//       <div className={`md:hidden ${outside ? "text-gray-300" : "text-black"}`}>
-//         {date.getDate()}
-//       </div>
-//     </td>
-//   );
-// };
+  return (
+    <td
+      {...tdprops}
+      className={`border-pickleball-blue-100 hide-scrollbar flex h-[16vh] flex-col items-end justify-start overflow-x-hidden border ${today ? "bg-blue-100" : "bg-white"}`}
+    >
+      <div
+        className={`pt-1 pr-2 text-sm md:text-4xl ${outside ? "text-gray-400" : "text-black"}`}
+      >
+        {date.getDate()}
+      </div>
 
-function Calendar() {
+      {filteredEvents?.map(({ title, start, location }, index) => {
+        const eventDate = new Date(start as string);
+        if (
+          eventDate.getDate() === date.getDate() &&
+          eventDate.getMonth() === date.getMonth() &&
+          eventDate.getFullYear() === date.getFullYear()
+        ) {
+          return (
+            <div
+              key={index}
+              className="text-pickleball-blue-100 flex w-full flex-col text-center text-xs font-semibold md:text-lg"
+            >
+              <div>{title}</div>
+              <div>
+                {start
+                  ? new Date(start).toLocaleTimeString([], {
+                      hour: "numeric",
+                      minute: "numeric",
+                    })
+                  : ""}
+              </div>
+              <div>{location}</div>
+            </div>
+          );
+        }
+      })}
+    </td>
+  );
+};
+
+function Calendar({
+  className,
+  classNames,
+  showOutsideDays = true,
+  events,
+  ...props
+}: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const today = new Date();
 
   const nextMonth = () => {
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() + 1);
+    newDate.setDate(
+      today.getMonth() === newDate.getMonth() &&
+        today.getFullYear() === newDate.getFullYear()
+        ? today.getDate()
+        : 1,
+    );
     setCurrentDate(newDate);
   };
 
   const prevMonth = () => {
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() - 1);
+    newDate.setDate(
+      today.getMonth() === newDate.getMonth() &&
+        today.getFullYear() === newDate.getFullYear()
+        ? today.getDate()
+        : 1,
+    );
     setCurrentDate(newDate);
   };
 
   return (
-    <div className="flex w-full flex-col items-center gap-8 py-8">
+    <div className="flex w-full flex-col items-center gap-8 pb-8">
       <CalendarHeader
         date={currentDate}
         onNextMonth={nextMonth}
@@ -105,25 +134,28 @@ function Calendar() {
       />
       <DayPicker
         month={currentDate}
-        showOutsideDays={true}
-        className="w-3/4"
+        showOutsideDays={showOutsideDays}
         formatters={{
           formatWeekdayName: (date) =>
             date.toLocaleString("default", { weekday: "short" }),
+          formatCaption: () => "",
         }}
+        className={`${className} w-4/5`}
         classNames={{
-          root: "w-3/4 pb-8",
-          month: "w-full flex items-center justify-center",
-          months: "flex w-full",
+          month: "flex items-center justify-center w-full",
           weekday:
-            "flex w-full items-center justify-center text-3xl text-center px-8 py-6",
+            "flex items-center justify-center md:text-3xl text-xl text-center md:px-8 md:py-6 px-4 py-3",
           weekdays:
-            "grid grid-cols-7 w-full bg-white text-pickleball-blue-100 rounded-t-2xl border border-pickleball-blue-100 border-1",
-          week: "grid grid-cols-7 w-full ",
+            "grid grid-cols-7 bg-white text-pickleball-blue-100 rounded-t-2xl border border-pickleball-blue-100 border-1",
+          week: "grid grid-cols-7 w-full",
           button_next: "hidden",
           button_previous: "hidden",
-          caption_label: "hidden",
+          ...classNames,
         }}
+        components={{
+          Day: (props) => <Day {...props} events={events} />,
+        }}
+        {...props}
       />
     </div>
   );
