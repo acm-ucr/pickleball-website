@@ -42,8 +42,10 @@ const ReadyToJoin = () => {
           viewport={{ once: true }}
           className="max-w-xs text-center text-base sm:max-w-2xl sm:text-lg"
         >
-          Join the Pickleball Club at UCR to play, learn, and connect with a welcoming community of players.
-           Whether you're a beginner or a seasoned competitor, come have fun, stay active, and be part of the game!
+          Join the Pickleball Club at UCR to play, learn, and connect with a
+          welcoming community of players. Whether you're a beginner or a
+          seasoned competitor, come have fun, stay active, and be part of the
+          game!
         </motion.p>
         <motion.div
           className="flex w-full"

@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-pickleball-lime-100 flex w-full items-center justify-between p-5 px-10 text-black">
-      <div className="z-20 cursor-pointer text-3xl font-semibold hover:scale-105 hover:text-pickleball-blue-100">
+      <div className="hover:text-pickleball-blue-100 z-20 cursor-pointer text-3xl font-semibold hover:scale-105">
         <Link href="/">PICKLEBALL@UCR</Link>
       </div>
       <div className="hidden space-x-16 text-xl md:flex">
