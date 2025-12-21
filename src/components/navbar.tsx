@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-pickleball-lime-100 flex w-full items-center justify-between p-5 px-10 text-black">
-      <div className="z-20 cursor-pointer text-3xl font-semibold">
+      <div className="z-20 cursor-pointer text-3xl font-semibold hover:scale-105 hover:text-pickleball-blue-100">
         <Link href="/">PICKLEBALL@UCR</Link>
       </div>
       <div className="hidden space-x-16 text-xl md:flex">
@@ -52,7 +52,7 @@ const Navbar = () => {
               className={`cursor-pointer ${
                 pathname === link
                   ? "text-pickleball-blue-100 font-semibold"
-                  : "hover:text-pickleball-green-100 text-black"
+                  : "hover:text-pickleball-blue-100 text-black"
               }`}
             >
               {name}

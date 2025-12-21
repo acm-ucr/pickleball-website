@@ -19,7 +19,7 @@ const Footer = () => {
             {footerData.map(({ Icon, link }) => (
               <div key={link}>
                 <Link href={link} target="_blank">
-                  <Icon className="w-auto text-5xl" />
+                  <Icon className="w-auto text-5xl hover:scale-110" />
                 </Link>
               </div>
             ))}
