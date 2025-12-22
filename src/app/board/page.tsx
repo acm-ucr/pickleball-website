@@ -1,14 +1,15 @@
 import Header from "@/components/header";
 import Pickleballs from "@/components/board/pickleballs";
+import Board from "@/components/board/board";
 
-const Pickleball = () => {
+const BoardPage = () => {
   return (
-    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex w-full flex-col items-center justify-center gap-5 overflow-hidden">
       <Header title="Board" />
-
+      <Board />
       <Pickleballs />
     </div>
   );
 };
 
-export default Pickleball;
+export default BoardPage;

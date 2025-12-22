@@ -10,7 +10,7 @@ export const paddles = [
   },
 
   {
-    text: "Find ''Pickleball Club'' and click ''Registration''. ",
+    text: "Find ''Pickleball Club'' and click ''Registration'' ",
     number: "3",
   },
 
@@ -20,7 +20,7 @@ export const paddles = [
   },
 
   {
-    text: "Then, go to the Pickleball page on the Highlander site.",
+    text: "Go to the Pickleball page on the Highlander site",
     number: "5",
   },
 ];
