@@ -18,7 +18,7 @@ const Button = ({
   return (
     <Link
       href={link}
-      className={`${textColor} ${background} ${borderColor} w-full rounded-xl border-2 py-3 text-center text-3xl`}
+      className={`${textColor} ${background} ${borderColor} w-full rounded-xl border-2 py-3 text-center text-xl hover:scale-105 sm:text-3xl`}
     >
       {text}
     </Link>

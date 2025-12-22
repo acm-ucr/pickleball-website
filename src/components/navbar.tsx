@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-pickleball-lime-100 flex w-full items-center justify-between p-5 px-10 text-black">
-      <div className="z-20 cursor-pointer text-3xl font-semibold">
+      <div className="hover:text-pickleball-blue-100 z-20 cursor-pointer text-3xl font-semibold hover:scale-105">
         <Link href="/">PICKLEBALL@UCR</Link>
       </div>
       <div className="hidden space-x-16 text-xl md:flex">
@@ -52,7 +52,7 @@ const Navbar = () => {
               className={`cursor-pointer ${
                 pathname === link
                   ? "text-pickleball-blue-100 font-semibold"
-                  : "hover:text-pickleball-green-100 text-black"
+                  : "hover:text-pickleball-blue-100 text-black"
               }`}
             >
               {name}
@@ -90,7 +90,7 @@ const Navbar = () => {
         animate={isOpen ? "open" : "closed"}
         exit="closed"
         ref={containerRef}
-        className="bg-pickleball-lime-100 absolute top-0 left-0 flex h-[40vh] w-full flex-col items-center justify-center shadow-lg md:hidden"
+        className="bg-pickleball-lime-100 absolute top-0 left-0 z-10 flex h-[40vh] w-full flex-col items-center justify-center shadow-lg md:hidden"
         variants={sidebarVariants}
       >
         <motion.ul className="list-none space-y-6 text-2xl text-black">
