@@ -22,7 +22,7 @@ const WeekEvents = () => {
       initial="initial"
       whileInView="whileInView"
     >
-      <div className="flex w-full flex-col items-center justify-center gap-15 pt-20 pb-20 md:flex-row md:gap-25">
+      <div className="flex w-full flex-col items-center justify-center gap-15 pt-4 pb-20 md:flex-row md:gap-25">
         <Event
           day="Monday"
           time="8pm"

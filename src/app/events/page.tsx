@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import WeekEvents from "@/components/events/events";
 const Events = () => {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center">
+    <div>
       <Header title="Events" />
       <WeekEvents />
     </div>

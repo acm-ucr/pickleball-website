@@ -78,7 +78,7 @@ const ReadyToJoin = () => {
             background="bg-white"
             borderColor="border-none"
             text="Recreational Pickleball Club Application"
-            link="/"
+            link="/404"
           />
         </motion.div>
       </div>
