@@ -53,7 +53,7 @@ const Day = ({ events, day, modifiers, ...tdprops }: DayProps) => {
   return (
     <td
       {...tdprops}
-      className={`border-pickleball-blue-100 hide-scrollbar flex h-[16vh] flex-col items-end justify-start overflow-x-hidden border ${today ? "bg-blue-100" : "bg-white"}`}
+      className={`border-pickleball-blue-100 hide hide-scrollbar flex h-[18vh] flex-col items-end justify-start overflow-y-hidden border ${today ? "bg-blue-100" : "bg-white"}`}
     >
       <div
         className={`pt-1 pr-2 text-sm md:text-4xl ${outside ? "text-gray-400" : "text-black"}`}
@@ -71,9 +71,11 @@ const Day = ({ events, day, modifiers, ...tdprops }: DayProps) => {
           return (
             <div
               key={index}
-              className="text-pickleball-blue-100 flex w-full flex-col text-center text-xs font-semibold md:text-lg"
+              className="text-pickleball-blue-100 flex w-full flex-col px-1 text-center text-xs font-semibold lg:text-base"
             >
-              <div>{title}</div>
+              <div className="w-full overflow-hidden text-ellipsis">
+                {title}
+              </div>
               <div>
                 {start
                   ? new Date(start).toLocaleTimeString([], {
@@ -82,7 +84,9 @@ const Day = ({ events, day, modifiers, ...tdprops }: DayProps) => {
                     })
                   : ""}
               </div>
-              <div>{location}</div>
+              <div className="w-full overflow-hidden text-ellipsis">
+                {location}
+              </div>
             </div>
           );
         }

@@ -32,7 +32,6 @@ const CalendarCall = () => {
           title: summary,
         }),
       );
-      console.log("events", events);
       return { events };
     },
   });
