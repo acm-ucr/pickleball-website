@@ -5,7 +5,7 @@ import Board from "@/components/board/board";
 const BoardPage = () => {
   return (
     <div className="relative flex w-full flex-col items-center justify-center gap-5 overflow-hidden">
-      <Header title="Board" />
+      <Header>Board</Header>
       <Board />
       <Pickleballs />
     </div>

@@ -3,10 +3,10 @@ import GalleryImages from "@/components/gallery/gallery";
 
 const Gallery = () => {
   return (
-    <div>
-      <Header title="Gallery" />
+    <>
+      <Header>Gallery</Header>
       <GalleryImages />
-    </div>
+    </>
   );
 };
 

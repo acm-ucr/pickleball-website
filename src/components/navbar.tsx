@@ -46,8 +46,8 @@ const Navbar = () => {
         <Link href="/">PICKLEBALL@UCR</Link>
       </div>
       <div className="hidden space-x-16 text-xl md:flex">
-        {items.map(({ name, link }) => (
-          <Link key={name} href={link} passHref>
+        {items.map(({ name, link }, index) => (
+          <Link key={index} href={link} passHref>
             <span
               className={`cursor-pointer ${
                 pathname === link
