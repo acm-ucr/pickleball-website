@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import logo from "@/public/images/logo_transparent_2.webp";
+import Logo from "@/public/logo_transparent_2.webp";
 import { motion } from "motion/react";
 
 const fadeInUp = {
@@ -25,7 +25,7 @@ const Landing = () => {
     >
       <div className="flex w-full flex-col items-center justify-center gap-y-6 px-4 sm:gap-y-8 md:w-3/4 lg:w-1/2">
         <Image
-          src={logo}
+          src={Logo}
           alt="Logo"
           className="h-auto w-1/2 sm:w-1/3 md:w-1/4"
         />

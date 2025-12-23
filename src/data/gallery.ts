@@ -1,8 +1,8 @@
-import gallery1 from "@/public/images/gallery/gallery1.webp";
-import gallery2 from "@/public/images/gallery/gallery2.webp";
-import gallery3 from "@/public/images/gallery/gallery3.webp";
-import gallery4 from "@/public/images/gallery/gallery4.webp";
-import gallery5 from "@/public/images/gallery/gallery5.webp";
+import gallery1 from "@/public/gallery1.webp";
+import gallery2 from "@/public/gallery2.webp";
+import gallery3 from "@/public/gallery3.webp";
+import gallery4 from "@/public/gallery4.webp";
+import gallery5 from "@/public/gallery5.webp";
 
 export const gallery = [
   {

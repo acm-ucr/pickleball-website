@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/images/logo_transparent_2.webp";
+import Logo from "@/public/logo_transparent_2.webp";
 import footerData from "@/data/footer";
 
 const Footer = () => {

@@ -21,26 +21,25 @@ const item = {
 
 const GalleryImages = () => {
   return (
-    <div className="flex items-center justify-center py-10">
+    <div className="flex items-center justify-center pb-10">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="w-full max-w-6xl px-4"
+        className="w-full px-4"
       >
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+        <div className="flex flex-wrap place-content-center gap-4">
           {gallery.map(({ image, alt }, index) => (
             <motion.div
               key={index}
               variants={item}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="relative w-full overflow-hidden rounded-lg"
             >
               <Image
                 src={image}
                 alt={alt}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full rounded-lg object-cover"
               />
             </motion.div>
           ))}
