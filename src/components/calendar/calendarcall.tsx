@@ -40,8 +40,7 @@ const CalendarCall = () => {
     <div className="w-full">
       {isLoading ? (
         <div className="items-center pb-8 text-center">
-          {" "}
-          <Header title="Loading Calendar..." />{" "}
+          <Header>Calendar</Header>
         </div>
       ) : (
         <Calendar
