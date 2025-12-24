@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/images/logo_transparent_2.webp";
+import Logo from "@/public/logo_transparent_2.webp";
 import footerData from "@/data/footer";
 
 const Footer = () => {
@@ -16,8 +16,8 @@ const Footer = () => {
           <p className="text-2xl md:text-4xl">Contact Us</p>
           <p className="text-lg md:text-xl">pickleballclubatucr@gmail.com</p>
           <div className="flex justify-center gap-x-[15%] md:justify-normal md:gap-x-[7%]">
-            {footerData.map(({ Icon, link }) => (
-              <div key={link}>
+            {footerData.map(({ Icon, link }, index) => (
+              <div key={index}>
                 <Link href={link} target="_blank">
                   <Icon className="w-auto text-5xl hover:scale-110" />
                 </Link>

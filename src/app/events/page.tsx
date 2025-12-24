@@ -4,11 +4,11 @@ import CalendarCall from "@/components/calendar/calendarcall";
 
 const Events = () => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center">
-      <Header title="Events" />
+    <>
+      <Header>Events</Header>
       <WeekEvents />
       <CalendarCall />
-    </div>
+    </>
   );
 };
 
