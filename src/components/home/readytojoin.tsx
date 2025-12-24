@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, spring, easeIn } from "motion/react";
 import Button from "@/components/home/button";
 
 const ButtonPopUp = {
@@ -10,6 +10,27 @@ const ButtonPopUp = {
     scale: 1,
   },
   hover: { scale: 1.05 },
+  viewport: { once: true },
+  transition: { type: spring, bounce: 0.45, delay: 1.1 },
+};
+
+const titleAnimation = (index: number) => ({
+  initial: { opacity: 0, scale: 3 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true },
+  transition: {
+    delay: index * 0.5,
+    duration: 0.7,
+    type: spring,
+    bounce: 0.55,
+  },
+});
+
+const descriptionAnimation = {
+  initial: { y: -25, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { ease: easeIn, delay: 0.9 },
+  viewport: { once: true },
 };
 
 const ReadyToJoin = () => {
@@ -20,15 +41,7 @@ const ReadyToJoin = () => {
           {"READY TO JOIN?".split(" ").map((word, index) => (
             <motion.p
               key={index}
-              initial={{ opacity: 0, scale: 3 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: index * 0.5,
-                duration: 0.7,
-                type: "spring",
-                bounce: 0.55,
-              }}
+              {...titleAnimation(index)}
               className="inline-block"
             >
               {word}&nbsp;
@@ -36,10 +49,7 @@ const ReadyToJoin = () => {
           ))}
         </div>
         <motion.p
-          initial={{ y: -25, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeIn", delay: 0.9 }}
-          viewport={{ once: true }}
+          {...descriptionAnimation}
           className="max-w-xs text-center text-base sm:max-w-2xl sm:text-lg"
         >
           Join the Pickleball Club at UCR to play, learn, and connect with a
@@ -47,15 +57,7 @@ const ReadyToJoin = () => {
           seasoned competitor, come have fun, stay active, and be part of the
           game!
         </motion.p>
-        <motion.div
-          className="flex w-full"
-          variants={ButtonPopUp}
-          viewport={{ once: true }}
-          initial="initial"
-          whileInView="animate"
-          transition={{ type: "spring", bounce: 0.45, delay: 1.1 }}
-          whileHover="hover"
-        >
+        <motion.div className="flex w-full" {...ButtonPopUp}>
           <Button
             textColor="text-white"
             background="bg-blue-500"
@@ -64,15 +66,7 @@ const ReadyToJoin = () => {
             link="https://highlanderlink.ucr.edu/organization/pickleball"
           />
         </motion.div>
-        <motion.div
-          className="flex w-full"
-          variants={ButtonPopUp}
-          viewport={{ once: true }}
-          initial="initial"
-          whileInView="animate"
-          transition={{ type: "spring", bounce: 0.45, delay: 1.1 }}
-          whileHover="hover"
-        >
+        <motion.div className="flex w-full" {...ButtonPopUp}>
           <Button
             textColor="text-blue-500"
             background="bg-white"

@@ -2,7 +2,7 @@
 
 import { gallery } from "@/data/gallery";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion, spring } from "motion/react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -16,7 +16,12 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: spring, stiffness: 200, damping: 15, duration: 0.6 },
+  },
+  whileHover: { scale: 1.05 },
 };
 
 const GalleryImages = () => {
@@ -26,9 +31,9 @@ const GalleryImages = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="w-full px-4"
+        className="flex w-full flex-col items-center px-4"
       >
-        <div className="flex flex-wrap place-content-center gap-4">
+        <div className="flex max-w-4/5 flex-wrap place-content-center items-center gap-4">
           {gallery.map(({ image, alt }, index) => (
             <motion.div
               key={index}

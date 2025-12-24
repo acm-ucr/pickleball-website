@@ -9,7 +9,7 @@ const Home = () => {
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
       <Pickleballs />
       <Landing />
-      <Header title="JOIN US" />
+      <Header>JOIN US</Header>
       <div className="absolute top-3 -right-5 -z-10 hidden rotate-[-141deg] md:block">
         <BluePaddle />
       </div>
