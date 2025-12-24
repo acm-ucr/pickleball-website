@@ -152,6 +152,7 @@ function Calendar({
           weekdays:
             "grid grid-cols-7 bg-white text-pickleball-blue-100 rounded-t-2xl border border-pickleball-blue-100 border-1",
           week: "grid grid-cols-7 w-full",
+          month_grid: "w-full table-fixed",
           button_next: "hidden",
           button_previous: "hidden",
           ...classNames,
