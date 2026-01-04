@@ -16,7 +16,7 @@ const Board = () => {
   const otherMembers = boardData.slice(2);
 
   return (
-    <div className="flex flex-col items-center gap-8 space-y-16 pt-16">
+    <div className="relative flex w-full flex-col items-center gap-2 space-y-16 overflow-hidden py-8">
       <div className="flex flex-col justify-center gap-24 sm:flex-row">
         {topMembers.map(({ name, image, position }, index) => (
           <motion.div key={index} {...dropIn(index)}>
